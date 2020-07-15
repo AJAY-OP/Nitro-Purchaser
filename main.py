@@ -12,8 +12,7 @@ a = requests.get('https://discord.com/api/v6/users/@me/billing/payment-sources',
 print(a.text)
 if a.status_code == 200:
   payment_source_id = a.json()[0]['id']
-elif "" or None in a.json:
-  print("no payment sources")
+# MY CODE = WONKY ASF
 
 data={
   'expected_amount': 499,
